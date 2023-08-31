@@ -1,0 +1,238 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    }
+    :root{
+        --primary-1: hsl(300, 43%, 22%);
+        --primary-2: hsl(333, 80%, 67%);
+        --neutral-1: hsl(303, 10%, 53%);
+        --neutral-2: hsl(300, 24%, 96%);
+        --neutral-3: hsl(0, 0%, 100%);
+    }
+*{
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+}
+.background-1{
+    width: 100%;
+    height: 100vh;
+    background: url('./images/bg-pattern-bottom-desktop.svg') no-repeat;
+    background-position: right bottom;
+    position: absolute;
+    z-index: -1;
+    position: fixed;
+}
+.background-2{
+    width: 100%;
+    height: 100vh;
+    background: url('./images/bg-pattern-top-desktop.svg') no-repeat;
+    background-position: top left;
+    position: absolute;
+    z-index: -2;
+    position: fixed;
+}
+.visual{
+    width: 100%;
+    height: 100vh;
+    padding: 110px 150px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.zona-valoraciones{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.valoraciones-descripcion{
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 200px;
+}
+.valoraciones-descripcion p:nth-child(1){
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: .8;
+    font-size: 60px;
+    color: var(--primary-1);
+}
+.valoraciones-descripcion p:nth-child(2){
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--neutral-1);
+    margin: 30px 0;
+}
+.valoraciones-calificaciones{
+    padding: 20px 0 40px 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.stars{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 12px;
+}
+.calificacion{
+    width: 80%;
+    height: 55px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    align-items: center;
+    background: var(--neutral-2);
+    padding: 0 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: var(--primary-1);
+    font-weight: 700;
+}
+.calificacion p{
+    margin-left: 30px;
+}
+.report-guru{
+    margin-left: 10%;
+}
+.bestTech{
+    margin-left: 20%;
+}
+.zona-resenas{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+.resena{
+    width: 100%;
+    height: 80%;
+    background: var(--primary-1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 32px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.resena-top{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+}
+.foto-perfil{
+    width: 60px;
+}
+.foto-perfil img{
+    width: 32px;
+    border-radius: 50%;
+}
+.nombre-validacion p:nth-child(1){
+    color: var(--neutral-3);
+    font-weight: 500;
+    margin: 3px 0;
+}
+.nombre-validacion p:nth-child(2){
+    color: hsla(333, 80%, 67%, 70%);
+    font-weight: 500;
+    margin: 3px 0;
+}
+.resena-opinion{
+    display: grid;
+    align-items: center;
+}
+.resena-opinion > p{
+    color: var(--neutral-2);
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+.irene{
+    margin-top: 23.6px;
+}
+.anne{
+    margin-top: 47.2px;
+}
+@media (max-width: 375px) {
+    .background-1{
+        width: 100%;
+        height: 100vh;
+        background: url('./images/bg-pattern-top-mobile.svg') no-repeat;
+        background-position: left top;
+        position: absolute;
+        z-index: -1;
+        position: fixed;
+    }
+    .background-2{
+        width: 100%;
+        height: 100vh;
+        background: url('./images/bg-pattern-bottom-mobile.svg') no-repeat;
+        background-position: right bottom;
+        position: absolute;
+        z-index: -1;
+        position: fixed;
+    }
+    .visual{
+        width: 100vw;
+        height: 1300px;
+        padding: 80px 20px;
+    }
+    .zona-valoraciones{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .valoraciones-descripcion{
+        text-align: center;
+        padding-right: 0;
+    }
+    .valoraciones-descripcion p:nth-child(1){
+        font-size: 44px;
+    }
+    .valoraciones-calificaciones{
+        width: 100%;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .calificacion{
+        width: 100%;
+        height: 70px;
+        gap: 8px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .calificacion p{
+        margin-left: 0;
+    }
+    .report-guru{
+        margin-left: 0;
+    }
+    .bestTech{
+        margin-left: 0;
+    }
+    .zona-resenas{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .resena{
+        height: 33%;
+        padding: 24px;
+    }
+    .resena-opinion > p{
+        margin-top: 10px;
+    }
+    .irene{
+        margin-top: 0;
+    }
+    .anne{
+        margin-top: 0;
+    }
+}
